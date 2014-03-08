@@ -1,0 +1,78 @@
+#!/bin/python
+import sys, os
+from lemma_pos_matching import lemma_matching as lemma_pos
+from lemma_matcing import lemma_matching
+from word_matching import word_matching,parse_xml
+header=1
+
+def clean(word):
+    return word.strip(",. ")
+
+def bleu(text, entailment):
+    def ngrams(stringlist, n):
+        i = 0
+        while i + n <= len(stringlist):
+            yield tuple(stringlist[i:i+n])
+            i += 1
+    words = [clean(x) for x in text.lower().split()]
+    hwords = [clean(x) for x in entailment.lower().split()]
+    bleus = 0
+    for N in range(1,1+len(hwords)):
+        wn = list(ngrams(words,N))
+        hn = list(ngrams(hwords,N))
+        cm = filter(lambda x: x in wn, hn)
+        bleus += len(cm) / len(hn)
+    bleus /= len(hwords)
+    return bleus
+    
+try:
+	os.remove(sys.argv[1].split(".")[0]+"_new.arff")
+except OSError:
+	pass
+fo=open(sys.argv[1].split(".")[0]+"_new.arff","w");
+with open(sys.argv[1]) as f:
+    for line in f:
+    	line=line[:-1]
+        if (line == "@DATA"):
+		header=0;
+		
+		fo.write(line+"\n");
+		continue;
+	if (header==1):
+		try:
+			if(line.split(" ")[0]=="@ATTRIBUTE" and line.split(" ")[1]=="accuracy"):
+				fo.write("@ATTRIBUTE word_matching NUMERIC\n")
+		except IndexError:
+			pass
+		fo.write(line+"\n");
+		continue;
+	else:
+		features=line.split(",");
+		#fo.write(line);	
+		id1=features[0];
+		overlapMax=features[1];
+		fMax=features[2];
+		leskMax=features[3];
+		cosineMax=features[4];
+		qOverlap=features[5];
+		qf=features[6];
+		qlesk=features[7];
+		qcosine=features[8];
+		accuracy=features[9];
+		ans_text=""
+		expected_ans_text=""
+		with open("answers.csv") as ansf:
+			for l in ansf:
+				l=l[:-1]
+				id_ans=l.split("\t")[0]
+				if(id_ans==id1):
+					question_text=l.split("\t")[1]
+					ans_text=l.split("\t")[2]
+					expected_ans_text=l.split("\t")[3]
+					'''question_text=question_text[1:-1]
+					ans_text=ans_text[1:-1]
+					expected_ans_text=expected_ans_text[1:-1]
+					'''
+					break;
+		fo.write(id1+","+overlapMax+","+fMax+","+","+leskMax+","+cosineMax+","+qOverlap+","+qf+","+qlesk+","+qcosine+","+","+str(word_matching(ans_text,expected_ans_text))+","+accuracy+"\n");			
+		#print question_text+","+expected_ans_text+","+ans_text

@@ -1,0 +1,144 @@
+results
+BASELINE-j48
+UA--------------------------
+	precision	recall	fmeasure
+correct	0.616	0.8295	0.7070
+partially_correct_incomplete	0.339	0.1875	0.2414
+contradictory	0.396	0.3784	0.3871
+irrelevant	0.200	0.0588	0.0909
+non_domain	0.621	0.7826	0.6923
+macroaverage	0.434	0.4474	0.4237
+microaverage	0.474	0.5194	0.4827
+
+UQ-----------------------------
+correct	0.608	0.709	0.655
+partially_correct_incomplete	0.261	0.250	0.255
+contradictory	0.382	0.279	0.322
+irrelevant	0.133	0.105	0.118
+non_domain	0.600	0.900	0.720
+macroaverage	0.397	0.449	0.414
+microaverage	0.457	0.480	0.463
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+J48- Baseline+word_matching
+
+UA------------------------------
+	precision	recall	fmeasure
+correct	0.633	0.8125	0.711
+partially_correct_incomplete	0.461	0.3125	0.372
+contradictory	0.446	0.4054	0.425
+irrelevant	0.125	0.0588	0.080
+non_domain	0.643	0.7826	0.706
+macroaverage	0.461	0.4744	0.459
+microaverage	0.522	0.5513	0.528
+
+UQ------------------------------------------
+	precision	recall	fmeasure
+correct	0.589	0.701	0.640
+partially_correct_incomplete	0.259	0.244	0.251
+contradictory	0.385	0.275	0.321
+irrelevant	0.000	0.000	0.000
+non_domain	0.643	0.900	0.750
+macroaverage	0.375	0.424	0.392
+microaverage	0.448	0.471	0.454
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Logistic-Baseline+word_matching
+
+UA---------------------------------
+	precision	recall	fmeasure
+correct	0.664	0.864	0.751
+partially_correct_incomplete	0.417	0.268	0.326
+contradictory	0.473	0.468	0.471
+irrelevant	0.000	0.000	0.000
+non_domain	0.643	0.783	0.706
+macroaverage	0.439	0.477	0.451
+microaverage	0.526	0.574	0.540
+
+UQ----------------------------------
+	precision	recall	fmeasure
+correct	0.654	0.721	0.686
+partially_correct_incomplete	0.308	0.238	0.269
+contradictory	0.432	0.443	0.437
+irrelevant	0.000	0.000	0.000
+non_domain	0.632	0.900	0.742
+macroaverage	0.405	0.460	0.427
+microaverage	0.499	0.529	0.511
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+j48-Baseline+word_matching+num_matching+negation_matching
+
+UA------------------------------------
+	precision	recall	fmeasure
+correct	0.696	0.8068	0.7474
+partially_correct_incomplete	0.447	0.3750	0.4078
+contradictory	0.500	0.4775	0.4885
+irrelevant	0.143	0.0588	0.0833
+non_domain	0.643	0.7826	0.7059
+macroaverage	0.486	0.5001	0.4866
+microaverage	0.559	0.5831	0.5674
+
+ 
+UQ-------------------------------------
+	precision	recall	fmeasure
+correct	0.647	0.619	0.633
+partially_correct_incomplete	0.345	0.390	0.366
+contradictory	0.409	0.385	0.397
+irrelevant	0.385	0.263	0.312
+non_domain	0.679	0.900	0.774
+macroaverage	0.493	0.511	0.496
+microaverage	0.508	0.507	0.506
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+j48-Baseline+word_matching+num_matching+negation_matching+antonym+synonym+wup_similarity
+
+UA------------------
+	precision	recall	fmeasure
+correct	0.712	0.801	0.754
+partially_correct_incomplete	0.452	0.420	0.435
+contradictory	0.485	0.441	0.462
+irrelevant	0.000	0.000	0.000
+non_domain	0.643	0.783	0.706
+macroaverage	0.458	0.489	0.471
+microaverage	0.557	0.581	0.567
+
+UQ-----------------	
+	precision	recall	fmeasure
+correct	0.701	0.593	0.643
+partially_correct_incomplete	0.319	0.384	0.348
+contradictory	0.376	0.385	0.381
+irrelevant	0.333	0.316	0.324
+non_domain	0.679	0.900	0.774
+macroaverage	0.482	0.516	0.494
+microaverage	0.514	0.496	0.502
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+KNN N=25
+
+	precision	recall	fmeasure
+correct	0.712	0.869	0.783
+partially_correct_incomplete	0.541	0.411	0.467
+contradictory	0.540	0.550	0.545
+irrelevant	0.000	0.000	0.000
+non_domain	0.654	0.739	0.694
+macroaverage	0.489	0.514	0.498
+microaverage	0.594	0.631	0.607
+
+UQ
+	precision	recall	fmeasure
+correct	0.677	0.706	0.691
+partially_correct_incomplete	0.328	0.337	0.332
+contradictory	0.390	0.357	0.373
+irrelevant	1.000	0.105	0.190
+non_domain	0.638	0.925	0.755
+macroaverage	0.607	0.486	0.468
+microaverage	0.524	0.521	0.512
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

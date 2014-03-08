@@ -1,0 +1,14 @@
+@RELATION accuracy
+
+@ATTRIBUTE id STRING
+@ATTRIBUTE overlap NUMERIC
+@ATTRIBUTE F NUMERIC
+@ATTRIBUTE lesk NUMERIC
+@ATTRIBUTE cosine NUMERIC
+@ATTRIBUTE questionOverlap NUMERIC
+@ATTRIBUTE questionF NUMERIC
+@ATTRIBUTE questionLesk NUMERIC
+@ATTRIBUTE questionCosine NUMERIC
+@ATTRIBUTE accuracy {correct,partially_correct_incomplete,contradictory,irrelevant,non_domain}
+
+@DATA

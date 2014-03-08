@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# A script that takes a directory with annotated answers and output
+# an arff file for learning
+
+usage() {
+    echo "extractBaselineFeatures.sh [ -m 5way | 3way | 2way ] dir" >&2
+    exit 1
+}
+
+
+mode="5way"
+if [ "-m" = "$1" ]; then
+    mode=$2
+    shift
+    shift
+fi
+
+if [[ $mode != "5way" && $mode != "3way" && $mode != "2way" ]]; then
+    echo "Incorrect mode value $mode" >& 2
+    usage
+fi
+
+
+dir=$1
+
+if [ -z "$dir" ]; then
+    echo "dir not specified" >&2
+    usage
+fi
+
+if [ ! -d "$dir" ]; then
+    echo "$dir is not a directory" >&2
+    usage
+fi
+
+tmpfile=/tmp/result.$RANDOM
+
+headerPrinted=""
+rm -f answers.csv
+for file in `ls -1 ${dir}/*.xml`; do
+    if [ -z "$headerPrinted" ]; then
+	headerPrinted="yes"
+	./extractBaselineFeatures.pl -h -m "$mode" < $file >$tmpfile
+	
+	if [ $? -ne 0 ]; then
+	    echo "" >& 2
+	    echo "Failure executing ./extractBaselineFeatures.pl -h $collapse < $file >$tmpfile" >& 2
+	exit 2
+	fi
+    else
+	./extractBaselineFeatures.pl  -m "$mode" < $file >>$tmpfile	
+	if [ $? -ne 0 ]; then
+	    echo "" >& 2
+	    echo "Failure executing ./extractBaselineFeatures.pl $collapse < $file >>$tmpfile" >& 2
+	exit 2
+	fi
+    fi
+done
+
+cat $tmpfile
+
+rm $tmpfile

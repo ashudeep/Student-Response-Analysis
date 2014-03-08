@@ -1,0 +1,35 @@
+BASELINE
+UA
+	precision	recall	fmeasure
+correct	0.652	0.852	0.739
+contradictory	0.422	0.342	0.378
+incorrect	0.613	0.480	0.539
+macroaverage	0.563	0.558	0.552
+microaverage	0.581	0.595	0.578
+
+UQ
+
+	precision	recall	fmeasure
+correct	0.612	0.706	0.656
+contradictory	0.421	0.283	0.338
+incorrect	0.415	0.463	0.438
+macroaverage	0.483	0.484	0.477
+microaverage	0.499	0.512	0.500
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+BASELINE+(Everything)
+UA
+	precision	recall	fmeasure
+correct	0.679	0.756	0.715
+contradictory	0.437	0.405	0.421
+incorrect	0.607	0.559	0.582
+macroaverage	0.574	0.573	0.573
+microaverage	0.593	0.599	0.595
+
+UQ
+correct	0.660	0.581	0.618
+contradictory	0.322	0.307	0.314
+incorrect	0.399	0.489	0.440
+macroaverage	0.460	0.459	0.457
+microaverage	0.486	0.474	0.477

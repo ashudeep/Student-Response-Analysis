@@ -1,0 +1,54 @@
+results
+BASELINE
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+J48- Baseline+word_matching
+
+UA------------------------------
+	precision	recall	fmeasure
+correct	0.633	0.8125	0.711
+partially_correct_incomplete	0.461	0.3125	0.372
+contradictory	0.446	0.4054	0.425
+irrelevant	0.125	0.0588	0.080
+non_domain	0.643	0.7826	0.706
+macroaverage	0.461	0.4744	0.459
+microaverage	0.522	0.5513	0.528
+
+UQ------------------------------------------
+	precision	recall	fmeasure
+correct	0.589	0.701	0.640
+partially_correct_incomplete	0.259	0.244	0.251
+contradictory	0.385	0.275	0.321
+irrelevant	0.000	0.000	0.000
+non_domain	0.643	0.900	0.750
+macroaverage	0.375	0.424	0.392
+microaverage	0.448	0.471	0.454
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Logistic-Baseline+word_matching
+
+UA---------------------------------
+	precision	recall	fmeasure
+correct	0.664	0.864	0.751
+partially_correct_incomplete	0.417	0.268	0.326
+contradictory	0.473	0.468	0.471
+irrelevant	0.000	0.000	0.000
+non_domain	0.643	0.783	0.706
+macroaverage	0.439	0.477	0.451
+microaverage	0.526	0.574	0.540
+
+UQ----------------------------------
+	precision	recall	fmeasure
+correct	0.654	0.721	0.686
+partially_correct_incomplete	0.308	0.238	0.269
+contradictory	0.432	0.443	0.437
+irrelevant	0.000	0.000	0.000
+non_domain	0.632	0.900	0.742
+macroaverage	0.405	0.460	0.427
+microaverage	0.499	0.529	0.511
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,14 @@
+UA------------------
+	precision	recall	fmeasure
+correct	0.719	0.699	0.709
+incorrect	0.802	0.817	0.810
+macroaverage	0.761	0.758	0.759
+microaverage	0.769	0.770	0.769
+
+UQ------------------
+	precision	recall	fmeasure
+correct	0.715	0.547	0.619
+incorrect	0.719	0.842	0.776
+macroaverage	0.717	0.694	0.698
+microaverage	0.717	0.718	0.710
+

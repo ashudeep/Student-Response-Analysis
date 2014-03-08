@@ -1,0 +1,58 @@
+j48
+UA------------------
+	precision	recall	fmeasure
+correct	0.719	0.699	0.709
+incorrect	0.802	0.817	0.810
+macroaverage	0.761	0.758	0.759
+microaverage	0.769	0.770	0.769
+
+UQ------------------
+	precision	recall	fmeasure
+correct	0.715	0.547	0.619
+incorrect	0.719	0.842	0.776
+macroaverage	0.717	0.694	0.698
+microaverage	0.717	0.718	0.710
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+j48 previous+wup
+=== Evaluation on test set ===
+=== Summary ===
+
+Correctly Classified Instances         320               72.8929 %
+Incorrectly Classified Instances       119               27.1071 %
+Kappa statistic                          0.4456
+Mean absolute error                      0.2737
+Root mean squared error                  0.5218
+Relative absolute error                 56.4801 %
+Root relative squared error            106.3679 %
+Total Number of Instances              439     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.716     0.262      0.646     0.716     0.679      0.725    correct
+                 0.738     0.284      0.795     0.738     0.765      0.725    incorrect
+Weighted Avg.    0.729     0.275      0.735     0.729     0.731      0.725
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 126  50 |   a = correct
+  69 194 |   b = incorrect
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+j48-Baseline+word_matching+num_matching+negation_matching+antonym+synonym+wup_similarity
+UA
+	precision	recall	fmeasure
+correct	0.722	0.722	0.722
+incorrect	0.814	0.814	0.814
+macroaverage	0.768	0.768	0.768
+microaverage	0.777	0.777	0.777
+
+
+UQ
+	precision	recall	fmeasure
+correct	0.743	0.587	0.656
+incorrect	0.740	0.853	0.793
+macroaverage	0.742	0.720	0.724
+microaverage	0.741	0.741	0.735
