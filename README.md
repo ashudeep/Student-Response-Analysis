@@ -22,3 +22,6 @@ To run the code:
 
 3.) For 2 way task, go to the folder semevalFormatProcessing-2way and run script.sh
 
+
+
+[![Join the chat at https://gitter.im/ashudeep/Student-Response-Analysis](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ashudeep/Student-Response-Analysis?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
